@@ -181,12 +181,13 @@ To create the `docker` group and add your user:
 3.  Add your user to `docker` group.
 
     ```bash
-    $ sudo usermod -aG docker your_username`
+    $ sudo usermod -aG docker $USER
     ```
 
-4. Log out and log back in.
+4. To ensure your user is running with the correct permissions
 
-    This ensures your user is running with the correct permissions.
+    - Restart the docker service
+    - Log out and log back in
 
 5.  Verify that your user is in the docker group by running `docker` without `sudo`.
 
